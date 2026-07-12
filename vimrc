@@ -13,6 +13,7 @@ call vundle#begin()
     Plugin 'junegunn/gv.vim'
     Plugin 'tpope/vim-unimpaired'
     Plugin 'jiangmiao/auto-pairs'
+    Plugin 'dense-analysis/ale'
 call vundle#end()
 filetype plugin indent on
 " To ignore plugin indent changes, instead use:
@@ -136,3 +137,5 @@ vnoremap <leader>p "+p
 " Paste from system clipboard without replacing it with the deleted text
 vnoremap <Leader>dp "_d"+P
 
+" Disable whitespace warnings
+let g:ale_warn_about_trailing_whitespace = 0
