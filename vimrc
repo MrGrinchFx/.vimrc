@@ -102,7 +102,7 @@ let mapleader = " "
 nmap <leader>, : <c-u>set hlsearch!<cr>:echo &hlsearch ? "hlsearch on" : "hlsearch off"<cr>
 
 " Press Leader + f to search for files in the current directory
-nnoremap <leader>f :call fzf#vim#files('~/', fzf#vim#with_preview())<CR>"
+nnoremap <leader>f :call fzf#vim#files('~/', fzf#vim#with_preview())<CR> 
 
 " Press Leader + b to search through your open buffers
 nnoremap <leader>b :Buffers<CR>
