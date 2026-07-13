@@ -90,17 +90,19 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp " store swap files here
 "SOUNDS ANNOYING
 set visualbell " don't beep
 set noerrorbells " don't beep
-
+set t_vb=
 set autoread
 set laststatus=2
 " Keymappings
+
+" Set Leader
 let mapleader = " "
 
 " Removes Highlighting via <Leader> + ","
 nmap <leader>, : <c-u>set hlsearch!<cr>:echo &hlsearch ? "hlsearch on" : "hlsearch off"<cr>
 
 " Press Leader + f to search for files in the current directory
-nnoremap <leader>f :Files<CR>
+nnoremap <leader>f :call fzf#vim#files('~/', fzf#vim#with_preview())<CR>"
 
 " Press Leader + b to search through your open buffers
 nnoremap <leader>b :Buffers<CR>
